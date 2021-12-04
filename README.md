@@ -1,6 +1,9 @@
 # LeafRecognitionCode
 
-Deep Learning code for Leaf Recognition using keras on python and matlab
+Deep Learning code for Leaf Recognition using keras on python and matlab.
+
+You can read the report of this repo [HERE](https://github.com/AaronVanV/LeafRecognitionReport).
+In the report we explain the code, teach you how to use it and other information.
 
 ## INSTALL for learning and predict
 
