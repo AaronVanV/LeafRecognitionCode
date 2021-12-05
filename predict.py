@@ -21,7 +21,7 @@ img_height=324
 
 inputdataGen = ImageDataGenerator()
 
-input = inputdataGen.flow_from_directory("data/img",target_size=(img_width, img_height),batch_size=1, class_mode=None)
+input = inputdataGen.flow_from_directory("data/img",target_size=(img_width, img_height),batch_size=1, class_mode=None, shuffle=False)
 
 
 

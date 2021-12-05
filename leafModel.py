@@ -23,8 +23,8 @@ train_data_dir = 'data/train'
 validation_data_dir = 'data/validation'
 nb_train_samples = 900
 nb_validation_samples = 225
-epochs = 5
-batch_size = 3
+epochs = 100
+batch_size = 45
 
 
 if K.image_data_format() == 'channels_first':
@@ -80,9 +80,9 @@ train_datagen = ImageDataGenerator()
 valid_datagen = ImageDataGenerator()
 
 #take path to dir and generate batches of augmented data
-train_generator = train_datagen.flow_from_directory(train_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical')
+train_generator = train_datagen.flow_from_directory(train_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical',shuffle=False)
 
-validation_generator = valid_datagen.flow_from_directory(validation_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical')
+validation_generator = valid_datagen.flow_from_directory(validation_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical',shuffle = False)
 
 csv_logger = CSVLogger('leaf_v1-1.csv');
 
