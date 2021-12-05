@@ -21,8 +21,8 @@ img_width, img_height = 324, 324
 
 train_data_dir = 'data/train'
 validation_data_dir = 'data/validation'
-nb_train_samples = 180
-nb_validation_samples = 45
+nb_train_samples = 900
+nb_validation_samples = 225
 epochs = 5
 batch_size = 3
 
@@ -66,7 +66,7 @@ model.add(BatchNormalization(axis=-1, momentum=0.99, epsilon=0.001, center=True,
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
 
-model.add(Dense(3))
+model.add(Dense(15))
 model.add(BatchNormalization(axis=-1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros', gamma_initializer='ones', moving_mean_initializer='zeros', moving_variance_initializer='ones'))
 model.add(Activation('softmax'))
 
