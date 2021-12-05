@@ -37,6 +37,12 @@ print(pred)
 arr=pred
 number=0
 
+leafs=[
+        "Ulmus carpinifolia","Acer","Salix aurita","Quercus","Alnus incana"
+        ,"Betula pubescens"," Salix alba","Populus tremula","Ulmus glabra","Sorbus aucuparia"
+        ,"Salix sinerea","Populus","Tilia","Sorbus intermedia", "Fagus silvatica"
+    ]
+
 for leaf in arr:
     number+=1
     
@@ -44,9 +50,13 @@ for leaf in arr:
     certain=str(maxElement.item())
     index = np.where(leaf == maxElement)[0]
 
-    indextext= index[0].item()+1
+    indextext= index[0].item()
 
-    print("Number: "+ str(number) + ", Certain: "+ certain+ ", Guess: Leaf "+ str(indextext))
+    
+    
+
+
+    print("Number: "+ str(number) + ", Certain: "+ certain+ ", Guess: "+ leafs[indextext])
 
 
 
