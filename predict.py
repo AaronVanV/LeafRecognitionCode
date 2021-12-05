@@ -47,7 +47,7 @@ for leaf in arr:
     number+=1
     
     maxElement = np.amax(leaf)
-    certain=str(maxElement.item())
+    certain=str(maxElement.item()*100)+" %"
     index = np.where(leaf == maxElement)[0]
 
     indextext= index[0].item()
