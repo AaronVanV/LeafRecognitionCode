@@ -1,5 +1,4 @@
 # load_model_sample.py
-#from PIL.Image import ImagePointHandler
 from keras.models import load_model
 from keras.preprocessing.image import load_img
 from keras.preprocessing import image
@@ -11,23 +10,21 @@ import numpy as np
 
 
 # load model
-model = load_model("model.h5")
+model = load_model("model")
 
+#img size
 img_width=324
 img_height=324
 
-# load a single image
 
 
+#input generator
 inputdataGen = ImageDataGenerator()
 
-input = inputdataGen.flow_from_directory("img",target_size=(img_width, img_height),batch_size=1, class_mode=None, shuffle=False)
+input = inputdataGen.flow_from_directory("img",target_size=(img_width, img_height),batch_size=1, class_mode=None)
 
 
 
-print()
-
-    
 # check prediction
     
 pred = model.predict(input)
@@ -49,9 +46,8 @@ for leaf in arr:
     maxElement = np.amax(leaf)
     certain=str(maxElement.item()*100)+" %"
     index = np.where(leaf == maxElement)[0]
-
     indextext= index[0].item()
-
+    print(indextext)
     
     
 
