@@ -1,7 +1,6 @@
 #!/N/u/
 '''
-Our own model developped from scratch the do leaf classification
-using batch Normalization as regularization method and relu as Activation function
+Model using batch Normalization as regularization method and relu as Activation function
 '''
 
 from keras.preprocessing.image import ImageDataGenerator, array_to_img
@@ -80,9 +79,9 @@ train_datagen = ImageDataGenerator()
 valid_datagen = ImageDataGenerator()
 
 #take path to dir and generate batches of augmented data
-train_generator = train_datagen.flow_from_directory(train_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical',shuffle=False)
+train_generator = train_datagen.flow_from_directory(train_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical')
 
-validation_generator = valid_datagen.flow_from_directory(validation_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical',shuffle = False)
+validation_generator = valid_datagen.flow_from_directory(validation_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical')
 
 csv_logger = CSVLogger('leaf_v1-1.csv');
 
