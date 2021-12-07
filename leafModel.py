@@ -49,7 +49,7 @@ model.add(Activation('relu'))
 #layer 4
 model.add(Conv2D(128, (5, 5), strides=(1,1), use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros'))
 model.add(Activation('relu'))
-#model.add(MaxPooling2D(pool_size=(2, 2),strides=(1, 1)))
+
 
 #flatten
 model.add(Flatten(input_shape=(11, 11)))
