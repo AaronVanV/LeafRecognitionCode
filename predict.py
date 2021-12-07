@@ -19,7 +19,7 @@ img_height=324
 
 
 #input generator
-inputdataGen = ImageDataGenerator()
+inputdataGen = ImageDataGenerator(rescale=1. / 255)
 
 input = inputdataGen.flow_from_directory("img",target_size=(img_width, img_height),batch_size=1, class_mode=None)
 
@@ -33,12 +33,16 @@ print(pred)
 
 arr=pred
 number=0
-
 leafs=[
-        "Ulmus carpinifolia","Acer","Salix aurita","Quercus","Alnus incana"
-        ,"Betula pubescens"," Salix alba","Populus tremula","Ulmus glabra","Sorbus aucuparia"
-        ,"Salix sinerea","Populus","Tilia","Sorbus intermedia", "Fagus silvatica"
+        "Ulmus carpinifolia","Sorbus aucuparia"
+        ,"Salix sinerea","Populus","Tilia","Sorbus intermedia", "Fagus silvatica","Acer","Salix aurita","Quercus","Alnus incana"
+        ,"Betula pubescens"," Salix alba","Populus tremula","Ulmus glabra"
     ]
+# leafs=[
+#         "Ulmus carpinifolia","Populus tremula","Ulmus glabra","Sorbus aucuparia","Alnus incana"
+#         ,"Betula pubescens"," Salix alba","Acer","Salix aurita","Quercus"
+#         ,"Salix sinerea","Populus","Tilia","Sorbus intermedia", "Fagus silvatica"
+#     ]
 
 for leaf in arr:
     number+=1
@@ -55,7 +59,10 @@ for leaf in arr:
     print("Number: "+ str(number) + ", Certain: "+ certain+ ", Guess: "+ leafs[indextext])
 
 
-
+#l14 -> index 5 ofwel leaf 6
+#l10 -> index 1
+#l14 -> index 2
+#l8 -> index 13
 
 
 
