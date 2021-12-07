@@ -43,11 +43,11 @@ model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
 
 #layer 3
-model.add(Conv2D(64, (5, 5), strides=(1,1), use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros'))
+model.add(Conv2D(128, (5, 5), strides=(1,1), use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros'))
 model.add(Activation('relu'))
 
 #layer 4
-model.add(Conv2D(64, (5, 5), strides=(1,1), use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros'))
+model.add(Conv2D(128, (5, 5), strides=(1,1), use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros'))
 model.add(Activation('relu'))
 #model.add(MaxPooling2D(pool_size=(2, 2),strides=(1, 1)))
 
@@ -55,7 +55,7 @@ model.add(Activation('relu'))
 model.add(Flatten(input_shape=(11, 11)))
 
 #dense layer Classifier
-model.add(Dense(64))
+model.add(Dense(128))
 model.add(BatchNormalization(axis=-1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros', gamma_initializer='ones', moving_mean_initializer='zeros', moving_variance_initializer='ones'))
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
