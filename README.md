@@ -2,7 +2,7 @@
 
 Deep Learning code for Leaf Recognition using keras on python and matlab.
 
-You can read the report of this repo [HERE](https://github.com/AaronVanV/LeafRecognitionReport).
+You can read the report of this repo [HERE](https://leafrecognitionreport.netlify.app/).
 In the report we explain the code, teach you how to use it and other information.
 
 ## INSTALL for learning and predict
