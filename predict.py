@@ -38,11 +38,11 @@ leafs=[
         ,"Salix sinerea","Populus","Tilia","Sorbus intermedia", "Fagus silvatica","Acer","Salix aurita","Quercus","Alnus incana"
         ,"Betula pubescens"," Salix alba","Populus tremula","Ulmus glabra"
     ]
-# leafs=[
-#         "Ulmus carpinifolia","Populus tremula","Ulmus glabra","Sorbus aucuparia","Alnus incana"
-#         ,"Betula pubescens"," Salix alba","Acer","Salix aurita","Quercus"
-#         ,"Salix sinerea","Populus","Tilia","Sorbus intermedia", "Fagus silvatica"
-#     ]
+
+l=[
+    "l1","l10","l11","l12","l13","l14","l15","l2","l3","l4","l5","l6","l7","l8","l9"
+]
+
 
 for leaf in arr:
     number+=1
@@ -51,18 +51,14 @@ for leaf in arr:
     certain=str(maxElement.item()*100)+" %"
     index = np.where(leaf == maxElement)[0]
     indextext= index[0].item()
-    print(indextext)
+
+    print("Activated node index: "+str(indextext))
     
     
 
 
-    print("Number: "+ str(number) + ", Certain: "+ certain+ ", Guess: "+ leafs[indextext])
+    print(str(number)+" : LeafNumber: "+ l[indextext] + ", Certain: "+ certain+ ", Guess: "+ leafs[indextext])
 
-
-#l14 -> index 5 ofwel leaf 6
-#l10 -> index 1
-#l14 -> index 2
-#l8 -> index 13
 
 
 
