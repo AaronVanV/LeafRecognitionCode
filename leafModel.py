@@ -73,10 +73,10 @@ model.add(Activation('softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 #data augmentation for training
-train_datagen = ImageDataGenerator()
+train_datagen = ImageDataGenerator(rescale=1. / 255)
 
 #data augmentation for testing:
-valid_datagen = ImageDataGenerator()
+valid_datagen = ImageDataGenerator(rescale=1. / 255)
 
 #take path to dir and generate batches of augmented data
 train_generator = train_datagen.flow_from_directory(train_data_dir, target_size=(img_width, img_height), batch_size=batch_size, class_mode='categorical')
