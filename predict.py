@@ -1,4 +1,3 @@
-# load_model_sample.py
 from keras.models import load_model
 from keras.preprocessing.image import load_img
 from keras.preprocessing import image
